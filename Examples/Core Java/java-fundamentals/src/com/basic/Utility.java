@@ -5,6 +5,6 @@ public class Utility {
 		System.out.println("demo() is called");
 	}
 	public static String hello(int i) {
-		return "Hello "+i;
+		return "Hello! "+i;
 	}
 }
