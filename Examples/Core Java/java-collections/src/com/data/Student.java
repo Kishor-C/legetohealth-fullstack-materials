@@ -1,6 +1,6 @@
 package com.data;
 
-public class Student {
+public class Student implements Comparable<Student>{
 	private int rollNo;
 	private String name;
 	public Student() {
@@ -48,6 +48,11 @@ public class Student {
 	}
 	public void setName(String name) {
 		this.name = name;
+	}
+	@Override
+	public int compareTo(Student o) {
+		//return (o.rollNo - this.rollNo);
+		return this.getName().compareTo(o.getName());
 	}
 	
 }
