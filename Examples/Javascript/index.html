@@ -11,13 +11,18 @@
     <h1>Understanding ES6, ES7, ES8 and latest Javascript features!</h1>
     <hr/>
     <script type = 'text/javascript'>
-      employee = {name : "Raj", age : 35};
-      fruits = ["apple", "mango", "orange"]
-      document.write(`<p>${Object.entries(employee)}</p>`);
-      document.write(`<p>${Object.values(employee)}</p>`);
-      document.write(`<p>${fruits.includes('apple')}</p>`)
-      document.write(`<p>${fruits.includes('grapes')}</p>`)
-      
+    // state & city are nested properties of object
+      var users = [
+          {name : "Alex", age : 30, address : {state: "KA", city: "BLR"}},
+          {name : "Bruce", age : 40},
+          {name : "Charles", age : 35, address : {state: "AP", city: "NLR"}},
+      ];
+      for(var v = 0; v < users.length; v++) {
+        let user = users[v];
+        let address = users[v]?.address;
+        document.write(`<p>Name: ${user.name}, Age: ${user.age}, `);
+        document.write(`State: ${address?.state}, City: ${address?.city}</p>`);
+      }
     </script>
 </body>
 </html>
