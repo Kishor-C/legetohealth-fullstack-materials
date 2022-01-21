@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- this is a root node which will have all the components including root component-->
+    <div id = 'root'></div>
+    <!--CDN Links of React & ReactDOM library-->
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type = 'text/babel'>
+        function Clock() {
+            let date = new Date();
+            return (<div>
+                <h2>This is Demo Component</h2>
+                <p>Hello {date.toLocaleTimeString()} Timer</p>
+            </div>)
+        }
+        function App() {
+            return (<div>
+                <h1>Welcome to App component</h1>
+                <Clock />
+            </div>);
+        }
+        function tick() {
+            ReactDOM.render(<App />, document.getElementById('root'));
+        }
+        setInterval(tick, 2000)
+        
+    </script>
+</body>
+</html>
