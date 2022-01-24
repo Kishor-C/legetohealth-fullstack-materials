@@ -1,13 +1,13 @@
 
 import './App.css';
-import Button, { Input, Simple } from './components/Button';
-import { Counter } from './components/Counter';
+import { EmployeeItems, EmployeeStore } from './components/EmployeeCRUD';
 function App() {
- 
   return (
-    <div>
-      <h1>Welcome to React with node</h1>
-      <Counter />
+    <div className = 'container-fluid'>
+      <h1 className = 'text-center'>Welcome to React with node</h1>
+      <EmployeeStore />
+      <hr />
+      <EmployeeItems />
     </div>
   );
 }

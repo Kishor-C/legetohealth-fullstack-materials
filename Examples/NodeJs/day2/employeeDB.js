@@ -1,9 +1,12 @@
 let app = require("express")();
 let MongoClient = require('mongodb').MongoClient;
+let cors = require('cors');
 let dbURL = "mongodb://localhost:27017";
 let port = 9090;
 app.listen(port, () => console.log(`Node server running in ${port}`));
 // retriving all the records
+app.use(cors({origin : '*'}));
+
 app.get('/employee', (request, response) => {
     MongoClient.connect(dbURL, {useNewUrlParser : true}, (err, client) => {
         if(!err) {

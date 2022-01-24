@@ -17,8 +17,9 @@ export class Counter extends React.Component {
             <h2>Counter Component</h2>
             <p>Like(s): {this.state.likes}</p>
             <p>Dislike(s): {this.state.dislikes}</p>
-            <button onClick = {this.likesCounter}>Like</button>
-            <button onClick = {this.dislikesCounter}>Dislike</button>
+            <button className = 'btn btn-primary' onClick = {this.likesCounter}>Like</button>
+            &nbsp;
+            <button className = 'btn btn-primary' onClick = {this.dislikesCounter}>Dislike</button>
         </div>)
     }
 }

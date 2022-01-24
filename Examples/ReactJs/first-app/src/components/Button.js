@@ -14,7 +14,7 @@ export class Simple extends React.Component {
 export function Input() {
     return (<div>
         <input type = 'text' onChange = {(event) => {console.log(event)}}/>
-        <button onClick = {(event) => {console.log(event)}}>Click2</button>
+        <button className = 'btn btn-primary' onClick = {(event) => {console.log(event)}}>Click2</button>
     </div>)
 }
 function Button() {
