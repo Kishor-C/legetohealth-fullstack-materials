@@ -41,7 +41,6 @@ export class EmployeeStore extends React.Component {
     }
     handleChange = (event) => {
         this.setState({[event.target.name]: event.target.value})
-        
     }
     render() {
         return (<div>
@@ -65,8 +64,22 @@ export class EmployeeStore extends React.Component {
                 <button type = 'submit' className = 'btn btn-primary'>Submit</button>
             </form>
             <div>
-                Id: {this.state.id}, Name: {this.state.name}, Salary: {this.state.salary}
+                Id: {this.state._id}, Name: {this.state.name}, Salary: {this.state.salary}
             </div>
+        </div>)
+    }
+}
+export class EmployeeUpdate extends React.Component {
+    render() {
+        return (<div>
+            <h3>Update Employee</h3> <hr />
+            <label>
+                Id <input type = 'text'></input>
+                <br />
+                Salary <input type = 'number'></input>
+                <br />
+                <button className = 'btn btn-primary'>Update</button>
+            </label>
         </div>)
     }
 }
