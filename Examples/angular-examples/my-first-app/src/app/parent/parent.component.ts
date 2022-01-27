@@ -8,4 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class ParentComponent {
   firstname = 'Alex';
   users = ['Sachin', 'Virat', 'Rohit', 'Yuvraj'];
+  clicks: any = 0;
+  numberOfClicks(value: any) {
+    console.log(value);
+    this.clicks = this.clicks + value;
+  }
 }
