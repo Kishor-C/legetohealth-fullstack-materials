@@ -1,0 +1,11 @@
+<div>
+    <h2>Databinding Demo</h2>
+    <h3>Event binding, Username: {{username}}</h3>
+    <!--#un is the template reference you can access some inbuilt properties like
+    value-->
+    <input type = 'text' autocomplete="off" #un>
+    <button (click) = "handleClick(un.value)" >MyButton</button>
+    <div [hidden] = 'toggleButton'>Hello Message</div>
+    <div>Toggle Button: {{toggleButton}}</div>
+    <button [disabled] = 'toggleButton'>MyButton2</button>
+</div>

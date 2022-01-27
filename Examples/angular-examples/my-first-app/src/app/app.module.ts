@@ -4,10 +4,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { DemoComponent } from './demo/demo.component';
 import { HelloComponent } from './hello/hello.component';
+import { DataBindComponent } from './data-bind/data-bind.component';
 
 @NgModule({
   declarations: [
-    AppComponent, DemoComponent, HelloComponent
+    AppComponent, DemoComponent, HelloComponent, DataBindComponent
   ],
   imports: [
     BrowserModule
