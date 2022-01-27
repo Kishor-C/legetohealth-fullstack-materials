@@ -8,4 +8,11 @@
     <div [hidden] = 'toggleButton'>Hello Message</div>
     <div>Toggle Button: {{toggleButton}}</div>
     <button [disabled] = 'toggleButton'>MyButton2</button>
+    <h3>Two way databinding</h3><hr />
+    <!--Two way databinding message here updates the component message-->
+    <input type = 'text' name = 'msg' [(ngModel)] = 'message'> <br />
+    <input type = 'text' name = 'msg2' [(ngModel)] = 'message'>
+    <div>
+        Message: {{message}}
+    </div>
 </div>

@@ -1,0 +1,11 @@
+<div>
+    <h2>Parent component {{firstname}}</h2><hr />
+    
+    <div>
+        <app-child [username] = 'firstname'></app-child>
+    </div>
+    <h2>Iterating the child</h2>
+    <div *ngFor = 'let u of users'>
+        <app-child [username] = 'u'></app-child>
+    </div>
+</div>

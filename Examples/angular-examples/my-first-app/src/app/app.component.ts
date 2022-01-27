@@ -12,4 +12,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'my-first-app';
+  users = [
+    {name : 'Alex', gender: 'Male'},
+    {name : 'Jennifer', gender: 'Female'},
+    {name : 'Sonia', gender : 'Female'}, 
+    {name : 'Sachin', gender: 'Male'}
+  ]
 }

@@ -1,6 +1,12 @@
 <div>
   <h1>Welcome to Angular</h1>
-  <h2>Title: {{title}}</h2>
+  <app-parent></app-parent>
+  
+  <!-- <h2>Title: {{title}}</h2>
+  <h3>Iterating the users using custom pipe</h3>
+  <div *ngFor = 'let u of users'>
+    Name: {{u.name | genderFormat : u.gender}}, Gender: {{u.gender}}
+  </div> -->
   <!-- <demo-app></demo-app> -->
-  <app-data-bind></app-data-bind>
+  <!-- <app-data-bind></app-data-bind> -->
 </div>

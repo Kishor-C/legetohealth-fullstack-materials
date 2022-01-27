@@ -9,6 +9,7 @@ export class DataBindComponent  {
 
   username: string = 'Alex';
   toggleButton: boolean = false;
+  message : string = '';
 
   handleClick(v: string) : void {
     this.username = v;
