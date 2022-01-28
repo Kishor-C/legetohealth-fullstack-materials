@@ -1,0 +1,39 @@
+<div>
+    <h3>MDF Demo</h3><hr />
+    <form [formGroup] = 'profile' (ngSubmit) = 'handleSubmit()'>
+        <div class = 'row'>
+            <div class = 'col-5'>
+                <div>
+                    Firstname <input type = 'text' formControlName = 'firstname' class = 'form-control' />
+                    <div class = 'alert alert-danger' 
+                        [hidden] = "profile.controls['firstname'].valid || profile.controls['firstname'].pristine">
+                        Firstname must be more than 3 characters
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class = 'row'>
+            <div class = 'col-5'>
+                <div>
+                    Lastname <input type = 'text' formControlName = 'lastname' class = 'form-control' />
+                    <div class = 'alert alert-danger'
+                    [hidden] = "profile.controls['lastname'].valid || profile.controls['lastname'].pristine">
+                    Lastname must be more than 2 characters
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class = 'row'>
+            <div class = 'col'>
+                <div>
+                    <input type = 'submit' value = 'Submit' [disabled] = 'profile.invalid' class = 'btn btn-primary'>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div>
+        <p>Form is valid: {{profile.valid}}</p>
+        <p>Firstname is valid: {{profile.controls['firstname'].valid}}</p>
+        <p>Lastname pristine: {{profile.controls['lastname'].pristine}}</p>
+    </div>
+</div>

@@ -3,14 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { TdfDemoComponent } from './tdf-demo/tdf-demo.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MdfDemoComponent } from './mdf-demo/mdf-demo.component';
 @NgModule({
   declarations: [
     AppComponent,
-    TdfDemoComponent
+    TdfDemoComponent,
+    MdfDemoComponent
   ],
   imports: [
-    BrowserModule, FormsModule
+    BrowserModule, FormsModule, ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
