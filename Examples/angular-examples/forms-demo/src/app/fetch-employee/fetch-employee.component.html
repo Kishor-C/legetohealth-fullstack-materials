@@ -1,0 +1,16 @@
+<div>
+    <h3>Search Employee</h3>
+    <form [formGroup] = 'employee' (ngSubmit) = 'handleClick()'>
+        <label>
+            Enter id
+            <input type = 'number' formControlName = 'id' />
+        </label>
+        <input type = 'submit' value = 'Search' class = 'btn btn-primary'>
+    </form>
+    <div *ngIf = 'emp' class = 'text-success'>
+        Hello {{emp.name}}, your salary is {{emp.salary}}
+    </div>
+    <div *ngIf = 'errorMessage' class = 'text-danger'>
+        {{errorMessage}}
+    </div>
+</div>

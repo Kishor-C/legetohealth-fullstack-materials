@@ -47,7 +47,7 @@ app.get('/employee/:id', (request, response) => {
                 response.json(record);
             }, () => {
                 if(x == 0) {
-                    response.json({error : `Sorry id ${id} is not found`});
+                    response.status(404).json({error : `Sorry id ${id} is not found`});
                 }
                 client.close();
             }); // forEach() end

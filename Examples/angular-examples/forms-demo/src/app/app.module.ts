@@ -5,14 +5,20 @@ import { AppComponent } from './app.component';
 import { TdfDemoComponent } from './tdf-demo/tdf-demo.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MdfDemoComponent } from './mdf-demo/mdf-demo.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FetchEmployeeComponent } from './fetch-employee/fetch-employee.component';
+import { FetchEmployeesComponent } from './fetch-employees/fetch-employees.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     TdfDemoComponent,
-    MdfDemoComponent
+    MdfDemoComponent,
+    FetchEmployeeComponent,
+    FetchEmployeesComponent
   ],
   imports: [
-    BrowserModule, FormsModule, ReactiveFormsModule
+    BrowserModule, FormsModule, ReactiveFormsModule, HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
