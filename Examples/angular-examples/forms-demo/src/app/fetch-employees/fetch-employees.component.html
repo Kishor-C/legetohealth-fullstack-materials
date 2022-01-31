@@ -1,1 +1,17 @@
-<p>fetch-employees works!</p>
+<div>
+    <table *ngIf = 'employees' class = 'table table-striped'>
+        <thead>
+            <tr>
+                <th>Sl. No.</th><th>Id</th><th>Name</th><th>Salary</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = "let emp of employees, let i = index">
+                <td>{{i + 1}}</td>
+                <td>{{emp._id}}</td>
+                <td>{{emp.name}}</td>
+                <td>{{emp.salary}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

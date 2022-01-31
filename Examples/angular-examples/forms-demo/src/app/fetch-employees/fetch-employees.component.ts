@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EmployeeService } from '../employee.service';
 
 @Component({
   selector: 'app-fetch-employees',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FetchEmployeesComponent implements OnInit {
 
-  constructor() { }
+  employees: any = undefined;
+  constructor(private _service : EmployeeService) { }
 
+  // called after the constructor
   ngOnInit(): void {
+    this._service.fetchEmployees()
+    .subscribe(response => this.employees = response)
   }
 
 }

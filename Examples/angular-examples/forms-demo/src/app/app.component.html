@@ -1,13 +1,24 @@
 <div class = 'container-fluid'>
-  <div class = 'row'>
+  <!-- <div class = 'row'>
     <div class = 'col-4'>
       <app-fetch-employee></app-fetch-employee>
     </div>
-    <div class = 'col-4'>
+    <div class = 'col'>
       <app-fetch-employees></app-fetch-employees>
     </div>
-  </div>
+  </div> -->
   <!-- <button (click) = "handleClick()">MyButton</button> -->
   <!-- <app-mdf-demo></app-mdf-demo> -->
   <!-- <app-tdf-demo></app-tdf-demo> -->
+  <div class = 'text-center'>
+    <h1>Angular App</h1><hr />
+  </div>
+  <div>
+    <a routerLink = "loadById">Employee</a> /
+    <a routerLink = "loadAll">All Employees</a> /
+    <a routerLink = "tdf">TDF</a> /
+    <a routerLink = "mdf">MDF</a> /
+  
+  </div>
+  <router-outlet></router-outlet>
 </div>

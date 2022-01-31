@@ -1,0 +1,19 @@
+<div>
+    <h3>Hello {{username}}</h3>
+    <div class = 'container'>
+        <div class = 'row'>
+            <div class = 'col-2'>
+                <a routerLink = 'dashboard'>Dashboard</a>
+                <hr />
+                <a routerLink = 'profile'>Profile</a>
+                <hr />
+                <a routerLink = 'settings'>Settings</a>
+                <hr />
+            </div>
+            <div class = 'col-5'>
+                <router-outlet></router-outlet>
+            </div>
+        </div>        
+    </div>
+
+</div>
