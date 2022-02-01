@@ -12,7 +12,7 @@ public class TestViewController {
 		ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
 		// how to get the object from the container
 		// <bean id = "empService" class = "com.org.service.EmployeeServiceImpl">
-		EmployeeServiceImpl service = (EmployeeServiceImpl) context.getBean("empService"); 
+		EmployeeServiceImpl service = (EmployeeServiceImpl) context.getBean("employeeServiceImpl"); 
 		service.save(); // save() -> dao.store()
 		//closing the context
 		ClassPathXmlApplicationContext cpx = (ClassPathXmlApplicationContext)context;

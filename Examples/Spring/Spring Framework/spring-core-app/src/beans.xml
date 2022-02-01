@@ -5,15 +5,20 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd">
 
+	<!-- scans all the component type classes like @Component, @Controller, @Service, @Repository -->
+	<context:component-scan base-package="com"></context:component-scan>
+	
 	<!-- Framework creates the bean instance of dao -->
-	<bean id = "empDao" class = "com.org.dao.EmployeeORMImpl">
-	</bean>
+	<!-- <bean id = "empDao" class = "com.org.dao.EmployeeORMImpl">
+	</bean> -->
 	
 	<!-- Framework creates the bean instance of service -->
+	<!-- 
 	<bean id = "empService" class = "com.org.service.EmployeeServiceImpl">
-		<!-- initializing the object properties i.e., supplying the dependencies through setDao-->
-		<!-- <property name = "dao" ref = "empDao"></property> -->
-		<!-- initializing the object property via constructor argument i.e., new EmployeeServiceImpl(empDao) -->
+		initializing the object properties i.e., supplying the dependencies through setDao
+		<property name = "dao" ref = "empDao"></property>
+		initializing the object property via constructor argument i.e., new EmployeeServiceImpl(empDao)
 		<constructor-arg index = "0" ref = "empDao"></constructor-arg>
 	</bean>
+	 -->
 </beans>
