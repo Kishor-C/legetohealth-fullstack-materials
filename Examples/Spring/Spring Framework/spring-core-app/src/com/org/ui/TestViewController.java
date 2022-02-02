@@ -15,6 +15,7 @@ public class TestViewController {
 		EmployeeServiceImpl service = (EmployeeServiceImpl) context.getBean("employeeServiceImpl"); 
 		service.save(); // save() -> dao.store()
 		//closing the context
+		service.remove();
 		ClassPathXmlApplicationContext cpx = (ClassPathXmlApplicationContext)context;
 		cpx.close();
 	}

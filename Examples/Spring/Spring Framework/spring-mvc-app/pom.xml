@@ -1,20 +1,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>spring-core-app</groupId>
-  <artifactId>spring-core-app</artifactId>
+  <groupId>spring-mvc-app</groupId>
+  <artifactId>spring-mvc-app</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
   <dependencies>
-  	<!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
+  	<!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
 	<dependency>
 	    <groupId>org.springframework</groupId>
-	    <artifactId>spring-context</artifactId>
-	    <version>5.0.0.RELEASE</version>
-	</dependency>
-	  <!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
-	<dependency>
-	    <groupId>org.aspectj</groupId>
-	    <artifactId>aspectjweaver</artifactId>
-	    <version>1.8.10</version>
+	    <artifactId>spring-webmvc</artifactId>
+	    <version>5.0.20.RELEASE</version>
 	</dependency>
 	  	
   </dependencies>
@@ -27,6 +22,13 @@
         <configuration>
           <source>1.8</source>
           <target>1.8</target>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>3.2.3</version>
+        <configuration>
+          <warSourceDirectory>WebContent</warSourceDirectory>
         </configuration>
       </plugin>
     </plugins>
