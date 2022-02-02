@@ -28,10 +28,33 @@ public class UserDaoJdbcImpl implements UserDao {
 	}
 	@Override
 	public User fetchUser(int userId) {
-		return null;
+		String selectUserQuery = "select * from users where userid = ?";
+		/*
+		 * queryForObject takes a RowMapper which returns a single user object based on the id
+		 * the last argument is the id that maps to the ?
+		 */
+		User userObtained = jdbc.queryForObject(selectUserQuery, (rs, index) -> {
+			User user = new User();
+			user.setUserId(rs.getInt("userid"));
+			user.setName(rs.getString("name"));
+			user.setPassword(rs.getString("password"));
+			user.setAge(rs.getInt("age"));
+			return user;
+		}, userId); // userId is the 3rd argment
+		return userObtained;
 	}
 	@Override
 	public List<User> fetchUsers() {
-		return null;
+		String selectQuery = "select * from users";
+		// query method returns List<T> where T is the type of object the RowMapper returns
+		return jdbc.query(selectQuery, (rs, index) -> {
+			User user = new User();
+			user.setUserId(rs.getInt("userid"));
+			user.setName(rs.getString("name"));
+			user.setPassword(rs.getString("password"));
+			user.setAge(rs.getInt("age"));
+			return user;
+		});
+		
 	}
 }

@@ -20,13 +20,13 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public User findUser(int userId) {
 		// TODO Auto-generated method stub
-		return null;
+		return userDao.fetchUser(userId);
 	}
 
 	@Override
 	public List<User> findAllUsers() {
 		// TODO Auto-generated method stub
-		return null;
+		return userDao.fetchUsers();
 	}
 
 	@Override

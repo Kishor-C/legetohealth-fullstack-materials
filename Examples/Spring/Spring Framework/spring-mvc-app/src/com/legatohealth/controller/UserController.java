@@ -1,6 +1,7 @@
 package com.legatohealth.controller;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -31,6 +32,12 @@ public class UserController {
 		user.setPassword(password);
 		userService.storeUser(user);
 		return new ModelAndView("storeSuccess", "msg", "Stored Successfully");
+	}
+	// showing all the users
+	@RequestMapping(value = "/fetchAll", method = RequestMethod.GET)
+	public ModelAndView fetchAllUsers() {
+		List<User> list = userService.findAllUsers();
+		return new ModelAndView("storeSuccess", "msg", list);
 	}
 	// application-path/spring/user/datetime
 	@RequestMapping(value = "/datetime", method = RequestMethod.GET)
