@@ -1,0 +1,4 @@
+server:
+  port: 8888
+# cloud location having configuration file
+spring:  cloud:    config:      server:        git:          uri: https://github.com/Kishor-C/spring-cloud-config.git

@@ -1,0 +1,6 @@
+# file name is mentioned using spring.application.name
+# the environment name you can mention using spring.profiles.active
+# to connect to the config server use spring.cloud.config.uri
+spring:  application:    name: hello  profiles:    active: dev  cloud:    config:      uri: http://localhost:8888/
+# the above configuration takes hello-<<profiles.active>>.yml i.e., hello-dev.yml (or) hello-test.yml
+# the above configuration connects to the config server 
