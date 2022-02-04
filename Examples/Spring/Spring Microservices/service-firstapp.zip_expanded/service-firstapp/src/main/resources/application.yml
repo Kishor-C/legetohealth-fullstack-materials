@@ -1,0 +1,4 @@
+server:
+  port: 9091
+#logical name of the application
+spring:  application:    name: firstapp

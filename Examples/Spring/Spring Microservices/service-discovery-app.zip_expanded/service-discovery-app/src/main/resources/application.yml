@@ -1,0 +1,7 @@
+#yml separates the subproperties with indentation
+server:  port: 8761
+
+#disable client feature
+#eureka.client.register-with-eureka = false
+#eureka.client.fetch-registry = false
+eureka:  client:    register-with-eureka: false    fetch-registry: false
