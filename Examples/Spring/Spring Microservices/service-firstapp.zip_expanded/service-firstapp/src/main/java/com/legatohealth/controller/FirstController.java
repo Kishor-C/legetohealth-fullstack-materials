@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class FirstController {
 	@GetMapping
 	public ResponseEntity<Object> greetings() {
+		System.out.println("---greetings()-----");
 		return ResponseEntity.status(200).body("FirstApp!");
 	}
 }
