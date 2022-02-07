@@ -16,6 +16,6 @@ public class ConfigController {
 	@GetMapping
 	public ResponseEntity<Object> readConfigMessage() {
 		// getMessage() returns the value the config file has
-		return ResponseEntity.status(200).body(bean.getMessage());
+		return ResponseEntity.status(200).body(bean.getMessage()+", Password is: "+bean.getPassword());
 	}
 }

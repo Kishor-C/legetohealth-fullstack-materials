@@ -1,0 +1,3 @@
+# you can use encrypt.key to provide the key for encryption & decryption
+
+encrypt:  key: my$key
