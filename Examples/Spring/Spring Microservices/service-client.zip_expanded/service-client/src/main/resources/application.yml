@@ -1,3 +1,19 @@
 server:
   port: 7071
 spring:  application:    name: clientapp
+# actuator end point to check the status of the circuit breaker - health, info, status 
+management:  endpoints:    web:      exposure:        include: "*"  endpoint:    health:      show-details: always
+  health:    circuitbreakers:      enabled: true
+resilience4j:  circuitbreaker:    instances:      fetchFirstApp:
+        register-health-indicator: true
+        ring-buffer-size-in-closed-state: 6
+        ring-buffer-size-in-half-open-state: 3
+        wait-duration-in-open-state: 50s
+        failure-rate-threshold: 50
+        record-exceptions:          - java.util.concurrent.TimeoutException
+          - java.io.IOException
+          - org.springframework.web.client.ResourceAccessException
+          - java.net.SocketTimeoutException
+          - com.netflix.client.ClientException
+          - feign.RetryableException
+      
